@@ -721,10 +721,6 @@ foreach ( keys %urls_to_download )
     $skipclean{$_} = 1;
 }
 
-#
-# START COPY
-# WIP
-#
 ######################################################################################
 ## cnf directory download
 
@@ -815,11 +811,6 @@ foreach ( keys %urls_to_download )
     s[~][%7E]g if get_variable("_tilde");
     $skipclean{$_} = 1;
 }
-
-#
-# END COPY
-# WIP
-#
 
 ######################################################################################
 ## Main download preparations
