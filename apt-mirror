@@ -730,9 +730,9 @@ foreach ( keys %urls_to_download )
 
 %urls_to_download = ();
 
-sub find_dep11_files_in_release
+sub find_cnf_files_in_release
 {
-    # Look in the dists/$DIST/Release file for the DEP-11 files that belong
+    # Look in the dists/$DIST/Release file for the cnf files that belong
     # to the given component and architecture.
 
     my $dist_uri  = shift;
@@ -761,7 +761,7 @@ sub find_dep11_files_in_release
                 if ( @parts == 3 )
                 {
                     my ( $sha1, $size, $filename ) = @parts;
-                    if ( $filename =~ m{^$component/dep11/(Components-${arch}\.yml|icons-[^./]+\.tar)\.(gz|bz2|xz)$} )
+                    if ( $filename =~ m{^$component/cnf/(Commands-${arch}\.yml|icons-[^./]+\.tar)\.(gz|bz2|xz)$} )
                     {
                         add_url_to_download( $dist_uri . $filename, $size );
                     }
@@ -786,12 +786,12 @@ sub find_dep11_files_in_release
     }
 }
 
-print "Processing DEP-11 indexes: [";
+print "Processing cnf indexes: [";
 
 foreach (@config_binaries)
 {
     my ( $arch, $uri, $distribution, @components ) = @{$_};
-    print "D";
+    print "C";
     if (@components)
     {
         $url = $uri . "/dists/" . $distribution . "/";
@@ -799,7 +799,7 @@ foreach (@config_binaries)
         my $component;
         foreach $component (@components)
         {
-            find_dep11_files_in_release( $url, $component, $arch );
+            find_cnf_files_in_release( $url, $component, $arch );
         }
     }
 }
@@ -807,7 +807,7 @@ foreach (@config_binaries)
 print "]\n\n";
 
 push( @index_urls, sort keys %urls_to_download );
-download_urls( "dep11", sort keys %urls_to_download );
+download_urls( "cnf", sort keys %urls_to_download );
 
 foreach ( keys %urls_to_download )
 {
