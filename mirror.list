@@ -15,15 +15,15 @@ set http_proxy        127.0.0.1:3128
 set proxy_user        user
 set proxy_password    password
 
-deb http://archive.ubuntu.com/ubuntu precise main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu precise-security main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu precise-updates main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu precise-backports main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu disco main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu disco-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu disco-updates main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu disco-backports main restricted universe multiverse
 
-#deb-src http://archive.ubuntu.com/ubuntu precise main restricted universe multiverse
-#deb-src http://archive.ubuntu.com/ubuntu precise-security main restricted universe multiverse
-#deb-src http://archive.ubuntu.com/ubuntu precise-updates main restricted universe multiverse
-#deb-src http://archive.ubuntu.com/ubuntu precise-backports main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu disco main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu disco-security main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu disco-updates main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu disco-backports main restricted universe multiverse
 
 clean http://archive.ubuntu.com/ubuntu
 
