@@ -32,3 +32,4 @@ See also:
   - apt-mirror supports cnf directory with Commands index
 - Set default architecture to amd64
 - Expanded README.md
+- Download 'debian-installer' directory
